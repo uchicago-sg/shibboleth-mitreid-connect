@@ -31,9 +31,9 @@ The following files should be edited before deployment:
 
       	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
       		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-      		<property name="url" value="jdbc:mysql://localhost/openidc" />
-      		<property name="username" value="openidc" />
-      		<property name="password" value="" />		
+      		<property name="url" value="jdbc:mysql://localhost/dbname" />
+      		<property name="username" value="uname" />
+      		<property name="password" value="pword" />		
       	</bean>
 
 Deployments other than those at the University of Chicago will probably want to
@@ -75,9 +75,9 @@ To deploy this package:
         # scp target/shibboleth-openid-connect.war /var/lib/tomcat6/webapps/ROOT.war
    
 5. Run the MySQL setup script at
-  `shibboleth-openid-connect/src/main/resources/db/tables/mysql_database_tables.sql`.
+   `shibboleth-openid-connect/src/main/resources/db/tables/mysql_database_tables.sql`.
   
-        # mysql -u root < mysql_database_tables.sql
+        # mysql -u root dbname < mysql_database_tables.sql
 
 To install this package, first configure the OpenID Connect server in
 `shibboleth-openid-connect/src/main/webapp/WEB-INF/server-config.xml`.
