@@ -28,7 +28,6 @@ cat > /etc/httpd/vhosts.d/tomcat-ajp.conf <<EOF
   SSLCertificateKeyFile /etc/httpd/ssl/server.key
 
   ProxyPass /Shibboleth.sso !
-  ProxyPass /local http://localhost:8082/
   ProxyPass / ajp://localhost:8081/
 
   <Location />
