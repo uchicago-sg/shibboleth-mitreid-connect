@@ -50,7 +50,7 @@ To deploy this package:
 1. Install Apache2 and Tomcat. A script, `install.sh`, is provided, which will
    configure an instance on Red Hat Enterprise Linux.
 
-        yum install tomcat6 tomcat-native mysql-server mysql-connector-java
+        # yum install tomcat6 tomcat-native mysql-server mysql-connector-java
    
 2. Configure Shibboleth authentication on Apache2.
 3. Configure a proxy to Tomcat, making sure to enable `ShibUseHeaders On`:
@@ -72,7 +72,7 @@ To deploy this package:
    `target/shibboleth-openid-connect.war` to `path/to/tomcat6/webapps/ROOT.war`.
    
         % mvn package
-        % scp target/shibboleth-openid-connect.war my-server:/var/lib/tomcat6/webapps/ROOT.war
+        % scp target/shibboleth-openid-connect.war /var/lib/tomcat6/webapps/ROOT.war
    
 5. Run the MySQL setup script at
   `shibboleth-openid-connect/src/main/resources/db/tables/mysql_database_tables.sql`.
