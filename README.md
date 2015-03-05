@@ -71,8 +71,8 @@ To deploy this package:
 4. Run `mvn package` in this repository, and copy
    `target/shibboleth-openid-connect.war` to `path/to/tomcat6/webapps/ROOT.war`.
    
-        % mvn package
-        % scp target/shibboleth-openid-connect.war /var/lib/tomcat6/webapps/ROOT.war
+        # mvn package
+        # scp target/shibboleth-openid-connect.war /var/lib/tomcat6/webapps/ROOT.war
    
 5. Run the MySQL setup script at
   `shibboleth-openid-connect/src/main/resources/db/tables/mysql_database_tables.sql`.
