@@ -1,0 +1,1 @@
+<% /* FIXME */ response.sendRedirect("/"); %>
